@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-primary mat-toolbar-single-row mat-elevatmat-z8" color="primary">
+  <div class="centrar">
+    Festivos Colombia - Validar si un día es festivo
+  </div>
+</mat-toolbar>
+<div>
+  <mat-form-field>
+    <mat-label>Elija una fecha</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-flat-button extended color="primary" (click)="onSubmit()">Validar fecha</button>
+</div>

@@ -1,0 +1,20 @@
+<mat-toolbar class="mat-primary mat-toolbar-single-row mat-elevatmat-z8" color="primary">
+  <div class="centrar">
+    Festivos Colombia - Listar festivos por año
+  </div>
+</mat-toolbar>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Buscar</mat-label>
+        <input matInput [(ngModel)]="fechaBusqueda">
+    </mat-form-field>
+    <button mat-flat-button extended color="primary" (click)="verificarInput()">Obtener Festivos</button>
+</div>
+
+<div>
+   <ngx-datatable class="dark" [rows]="festivos" [columns]="columnas"
+    [rowHeight]="'auto'" [headerHeight]="50" [footerHeight]="50" [limit]="10"
+    [messages]="{emptyMessage: 'Por favor seleccione un año para listar los festivos'}"
+    [offset]="page.pageNumber" (page)="onPage($event)"
+    ></ngx-datatable>
+</div>
