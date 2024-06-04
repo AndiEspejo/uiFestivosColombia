@@ -1,3 +1,7 @@
+# Nota importante
+
+El proyecto tiene dos rutas principales: validar y obtener. La ruta por defecto va a enviar a validar, para ir a la vista y obtener la lista de festivos por año hay que dirigirse a la ruta /obtener
+
 # UiFestivosColombia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
